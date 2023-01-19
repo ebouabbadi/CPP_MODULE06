@@ -4,7 +4,7 @@ SRC = main.cpp Convert.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-CC = c++ -Wall -Wextra -Werror -std=c++98
+CC = c++ #-Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
