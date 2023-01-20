@@ -13,11 +13,10 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 		return (0);
-	std::string str(av[1]);
-	Convert c(str);
+	Convert c((std::string)av[1]);
 	if (!c.parsing())
 		return (std::cout << "error!!\n", 0);
-	print_value(str);
+	print_value((std::string)av[1]);
 	return (0);
 }
 
