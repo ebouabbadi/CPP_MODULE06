@@ -2,7 +2,7 @@
 
 int ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9' && c == '.')
+	if ((c >= '0' && c <= '9') || (c == '.'))
 		return (1);
 	else
 		return (0);
@@ -11,11 +11,18 @@ int ft_isdigit(int c)
 int parsing(std::string str)
 {
 	int i = 0;
+	int len = str.length();
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]))
+		if (!ft_isdigit(str[i]) && str[len - 1] != 'f')
 			return (0);
 		i++;
+	}
+	i = 0;
+	bool signed = false; 
+	while (str[i]){
+		if (str[i] == '.')
+
 	}
 	return (1);
 }
