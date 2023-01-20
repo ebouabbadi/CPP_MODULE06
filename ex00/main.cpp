@@ -1,49 +1,29 @@
 #include "Convert.hpp"
 
-int ft_isdigit(int c)
+void print_value(std::string str)
 {
-	if ((c >= '0' && c <= '9') || (c == '.'))
-		return (1);
-	else
+	char c = str[0];
+	int i = static_cast<int>(std::atoi(str.c_str()));
+	std::cout << "int : " << i << std::endl;
+	//<<"char : "<<str<<std::endl
+	// <<"double : "<<str<<std::endl
+	// <<"float : "<<str<<std::endl;
+}
+int main(int ac, char **av)
+{
+	if (ac != 2)
 		return (0);
+	std::string str(av[1]);
+	Convert c(str);
+	if (!c.parsing())
+		return (std::cout << "error!!\n", 0);
+	print_value(str);
+	return (0);
 }
 
-int parsing(std::string str)
-{
-	int i = 0;
-	while (str[i] && str.length() != 1)
-	{
-		if (!ft_isdigit(str[i]) && str[str.length() - 1] != 'f')
-			return (0);
-		i++;
-	}
-	i = 0;
-	int flag = 0;
-	while (str[i])
-	{
-		if (str[i] == '.')
-			flag++;
-		i++;
-	}
-	if (flag > 1)
-		return (0);
-	return (1);
-}
-// int main(int ac, char **av)
+// #include <iostream>
+// using namespace std;
+// int main()
 // {
-// 	if (ac != 2)
-// 		return (0);
-// 	std::string str(av[1]);
-// 	if (!parsing(str))
-// 		return (std::cout << "error!!\n", 0);
-// 	std::cout << str << std::endl;
-// 	return (0);
+//     cout << static_cast<int>(12.45);
 // }
-
-
-#include <iostream>
-using namespace std;
-int main()
-{
-    cout << static_cast<int>(12.45);
-}
