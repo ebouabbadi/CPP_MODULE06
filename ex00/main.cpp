@@ -29,13 +29,21 @@ int parsing(std::string str)
 		return (0);
 	return (1);
 }
-int main(int ac, char **av)
+// int main(int ac, char **av)
+// {
+// 	if (ac != 2)
+// 		return (0);
+// 	std::string str(av[1]);
+// 	if (!parsing(str))
+// 		return (std::cout << "error!!\n", 0);
+// 	std::cout << str << std::endl;
+// 	return (0);
+// }
+
+
+#include <iostream>
+using namespace std;
+int main()
 {
-	if (ac != 2)
-		return (0);
-	std::string str(av[1]);
-	if (!parsing(str))
-		return (std::cout << "error!!\n", 0);
-	std::cout << str << std::endl;
-	return (0);
+    cout << static_cast<int>(12.45);
 }
