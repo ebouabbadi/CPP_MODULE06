@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-enum type{
+enum type
+{
     IS_INT,
     IS_DOUBLE,
     IS_FLOAT,
@@ -18,6 +19,7 @@ private:
     double _Double;
     int _Int;
     float _Float;
+
 public:
     Convert();
     Convert(std::string type);
@@ -25,7 +27,6 @@ public:
     Convert &operator=(const Convert &c);
     ~Convert();
     int parsing();
-
 };
 
 #endif

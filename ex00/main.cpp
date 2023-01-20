@@ -19,10 +19,3 @@ int main(int ac, char **av)
 	print_value((std::string)av[1]);
 	return (0);
 }
-
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     cout << static_cast<int>(12.45);
-// }
