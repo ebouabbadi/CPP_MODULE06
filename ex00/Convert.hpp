@@ -2,10 +2,11 @@
 #define CONVERT_HPP
 
 #include <iostream>
+#include <iomanip>
 
 enum type
 {
-    IS_INT,
+    IS_INT = 3,
     IS_DOUBLE,
     IS_FLOAT,
     IS_CHAR,
@@ -15,10 +16,6 @@ class Convert
 {
 private:
     std::string str;
-    char _Char;
-    double _Double;
-    int _Int;
-    float _Float;
 
 public:
     Convert();
@@ -27,6 +24,7 @@ public:
     Convert &operator=(const Convert &c);
     ~Convert();
     int parsing();
+    int execute(int type);
 };
 
 #endif
