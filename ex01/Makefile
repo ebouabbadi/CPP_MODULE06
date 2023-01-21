@@ -1,6 +1,6 @@
 NAME = Convert
 
-SRC = main.cpp Convert.cpp
+SRC = main.cpp Data.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Convert.hpp
+%.o:%.cpp  Data.hpp
 	$(CC) -c $< -o $@
 
 clean :

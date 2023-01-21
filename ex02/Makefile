@@ -1,7 +1,7 @@
 NAME = Convert
 
-SRC = main.cpp Convert.cpp
-
+SRC =  main.cpp A.cpp B.cpp C.cpp Base.cpp
+   
 OBJ = $(SRC:.cpp=.o)
 
 CC = c++ -Wall -Wextra -Werror -std=c++98
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Convert.hpp
+%.o:%.cpp  A.hpp B.hpp C.hpp Base.hpp
 	$(CC) -c $< -o $@
 
 clean :

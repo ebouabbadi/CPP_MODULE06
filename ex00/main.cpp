@@ -12,7 +12,7 @@ int main(int ac, char **av)
 	{
 		std::cout << "char: impossible" << std::endl;
 		std::cout << "int : impossible" << std::endl;
-		std::cout << "float : " << str << std::endl;
+		std::cout << "float : " << str + "f"<< std::endl;
 		std::cout << "double : " << str << std::endl;
 		return (0);
 	}
