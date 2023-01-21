@@ -1,14 +1,13 @@
 #ifndef C_HPP
 #define C_HPP
 
-class C
+#include "Base.hpp"
+
+class C : public Base
 {
-private:
-    /* data */
 public:
-    C(/* args */);
+    C();
     ~C();
 };
-
 
 #endif

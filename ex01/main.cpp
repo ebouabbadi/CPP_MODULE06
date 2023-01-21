@@ -13,8 +13,6 @@ int main()
               << "Id: " << ptr->id << std::endl
               << "Score: " << ptr->score << std::endl;
     uintptr_t un = serialize(ptr);
-    std::cout << "&un = " << un << std::endl
-              << "&ptr = " << ptr << std::endl;
     delete ptr;
     Data *ptr2 = deserialize(un);
     std::cout << "First name: " << ptr2->first_name << std::endl
