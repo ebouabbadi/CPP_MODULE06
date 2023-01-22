@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/22 11:02:49 by ebouabba          #+#    #+#             */
+/*   Updated: 2023/01/22 11:02:50 by ebouabba         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Data.hpp"
 
 int main()
@@ -12,9 +24,9 @@ int main()
               << "Last name: " << ptr->last_name << std::endl
               << "Id: " << ptr->id << std::endl
               << "Score: " << ptr->score << std::endl;
-    uintptr_t un = serialize(ptr);
+    uintptr_t unp = serialize(ptr);
     delete ptr;
-    Data *ptr2 = deserialize(un);
+    Data *ptr2 = deserialize(unp);
     std::cout << "First name: " << ptr2->first_name << std::endl
               << "Last name: " << ptr2->last_name << std::endl
               << "Id: " << ptr2->id << std::endl
